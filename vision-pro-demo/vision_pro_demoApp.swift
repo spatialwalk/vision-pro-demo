@@ -14,8 +14,8 @@ struct vision_pro_demoApp: App {
             ContentView()
         }.windowStyle(.volumetric)
 
-        ImmersiveSpace(id: "ImmersiveSpace") {
-            ImmersiveView()
+        ImmersiveSpace(id: "ModelAnimation") {
+            ModelAnimation()
         }
     }
 }

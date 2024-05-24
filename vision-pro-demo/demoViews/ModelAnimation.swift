@@ -9,17 +9,21 @@ import SwiftUI
 import RealityKit
 import RealityKitContent
 
-struct ImmersiveView: View {
+struct ModelAnimation: View {
     var body: some View {
         RealityView { content in
             // Add the initial RealityKit content
-            if let scene = try? await Entity(named: "Immersive", in: realityKitContentBundle) {
+            if let scene = try? await Entity(named: "dance", in: realityKitContentBundle) {
                 content.add(scene)
+                for anim in scene.availableAnimations {
+                    scene.playAnimation(anim.repeat(duration: .infinity), transitionDuration: 1.25, startsPaused: false)
+                }
             }
+                
         }
     }
 }
 
 #Preview(immersionStyle: .mixed) {
-    ImmersiveView()
+    ModelAnimation()
 }

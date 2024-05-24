@@ -14,6 +14,7 @@ struct ContentView: View {
     @State private var enlarge = false
     @State private var showImmersiveSpace = false
     @State private var immersiveSpaceIsShown = false
+    @State private var currentImmersiveSpaceId: String = ""
 
     @Environment(\.openImmersiveSpace) var openImmersiveSpace
     @Environment(\.dismissImmersiveSpace) var dismissImmersiveSpace
@@ -34,7 +35,7 @@ struct ContentView: View {
         .onChange(of: showImmersiveSpace) { _, newValue in
             Task {
                 if newValue {
-                    switch await openImmersiveSpace(id: "ImmersiveSpace") {
+                    switch await openImmersiveSpace(id: currentImmersiveSpaceId) {
                     case .opened:
                         immersiveSpaceIsShown = true
                     case .error, .userCancelled:
@@ -42,10 +43,12 @@ struct ContentView: View {
                     @unknown default:
                         immersiveSpaceIsShown = false
                         showImmersiveSpace = false
+                        currentImmersiveSpaceId = ""
                     }
                 } else if immersiveSpaceIsShown {
                     await dismissImmersiveSpace()
                     immersiveSpaceIsShown = false
+                    currentImmersiveSpaceId = ""
                 }
             }
         }
@@ -56,7 +59,19 @@ struct ContentView: View {
             ToolbarItemGroup(placement: .bottomOrnament) {
                 VStack (spacing: 12) {
                     Toggle("Enlarge RealityView Content", isOn: $enlarge)
-                    Toggle("Show ImmersiveSpace", isOn: $showImmersiveSpace)
+                    Toggle(isOn: $showImmersiveSpace) {
+                        if showImmersiveSpace {
+                            Text(currentImmersiveSpaceId)
+                        } else {
+                            Text("none")
+                        }
+                        
+                    }
+                    Button("Open ModelAnimation") {
+                        showImmersiveSpace = true
+                        currentImmersiveSpaceId = "ModelAnimation"
+                    }
+                    
                 }
             }
         }

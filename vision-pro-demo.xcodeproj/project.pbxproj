@@ -10,7 +10,7 @@
 		5A44155E2C0068D200BECE80 /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = 5A44155D2C0068D200BECE80 /* RealityKitContent */; };
 		5A4415602C0068D200BECE80 /* vision_pro_demoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A44155F2C0068D200BECE80 /* vision_pro_demoApp.swift */; };
 		5A4415622C0068D200BECE80 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4415612C0068D200BECE80 /* ContentView.swift */; };
-		5A4415642C0068D200BECE80 /* ImmersiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4415632C0068D200BECE80 /* ImmersiveView.swift */; };
+		5A4415642C0068D200BECE80 /* ModelAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4415632C0068D200BECE80 /* ModelAnimation.swift */; };
 		5A4415662C0068D400BECE80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A4415652C0068D400BECE80 /* Assets.xcassets */; };
 		5A4415692C0068D400BECE80 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A4415682C0068D400BECE80 /* Preview Assets.xcassets */; };
 		5A4415742C0068D400BECE80 /* vision_pro_demoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4415732C0068D400BECE80 /* vision_pro_demoTests.swift */; };
@@ -33,7 +33,7 @@
 		5A44155C2C0068D200BECE80 /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
 		5A44155F2C0068D200BECE80 /* vision_pro_demoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vision_pro_demoApp.swift; sourceTree = "<group>"; };
 		5A4415612C0068D200BECE80 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		5A4415632C0068D200BECE80 /* ImmersiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImmersiveView.swift; sourceTree = "<group>"; };
+		5A4415632C0068D200BECE80 /* ModelAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelAnimation.swift; sourceTree = "<group>"; };
 		5A4415652C0068D400BECE80 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A4415682C0068D400BECE80 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5A44156A2C0068D400BECE80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -86,9 +86,9 @@
 		5A44155A2C0068D200BECE80 /* vision-pro-demo */ = {
 			isa = PBXGroup;
 			children = (
+				5A4415812C006D6C00BECE80 /* demoViews */,
 				5A44155F2C0068D200BECE80 /* vision_pro_demoApp.swift */,
 				5A4415612C0068D200BECE80 /* ContentView.swift */,
-				5A4415632C0068D200BECE80 /* ImmersiveView.swift */,
 				5A4415652C0068D400BECE80 /* Assets.xcassets */,
 				5A44156A2C0068D400BECE80 /* Info.plist */,
 				5A4415672C0068D400BECE80 /* Preview Content */,
@@ -118,6 +118,14 @@
 				5A4415732C0068D400BECE80 /* vision_pro_demoTests.swift */,
 			);
 			path = "vision-pro-demoTests";
+			sourceTree = "<group>";
+		};
+		5A4415812C006D6C00BECE80 /* demoViews */ = {
+			isa = PBXGroup;
+			children = (
+				5A4415632C0068D200BECE80 /* ModelAnimation.swift */,
+			);
+			path = demoViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,7 +235,7 @@
 			files = (
 				5A4415622C0068D200BECE80 /* ContentView.swift in Sources */,
 				5A4415602C0068D200BECE80 /* vision_pro_demoApp.swift in Sources */,
-				5A4415642C0068D200BECE80 /* ImmersiveView.swift in Sources */,
+				5A4415642C0068D200BECE80 /* ModelAnimation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
